@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sourabh Dogra — WordPress & PHP Developer with 4+ years of experience building scalable web solutions.">
+  <meta name="keywords" content="WordPress developer, PHP developer, web developer, React, DevOps, portfolio, India">
+  <meta name="author" content="Sourabh Dogra">
+  <meta property="og:title" content="Sourabh Dogra | WordPress & PHP Developer">
+  <meta property="og:description" content="WordPress & PHP Developer with 4+ years of experience. Building clean, scalable web solutions.">
+  <meta property="og:type" content="website">
+  <title>Sourabh Dogra | WordPress & PHP Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ========== LOADER ========== -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">S<span>.</span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar-fill" id="loader-fill"></div></div>
+    <div class="loader-pct" id="loader-pct">0%</div>
+  </div>
+</div>
+
+<!-- ========== CUSTOM CURSOR ========== -->
+<div id="c-dot"></div>
+<div id="c-ring"></div>
+
+<!-- ========== SCROLL PROGRESS BAR ========== -->
+<div id="scroll-bar"></div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">S<span class="logo-dot">.</span>Dogra</a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home"       class="nav-link">Home</a></li>
+      <li><a href="#about"      class="nav-link">About</a></li>
+      <li><a href="#skills"     class="nav-link">Skills</a></li>
+      <li><a href="#services"   class="nav-link">Services</a></li>
+      <li><a href="#projects"   class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#clients"    class="nav-link">Clients</a></li>
+      <li><a href="#contact"    class="nav-link nav-cta">Contact</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ========== THREE.JS BACKGROUND ========== -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ==================================================
+  HERO
+================================================== -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-text">
+      <p class="hero-eyebrow">Hi there, I'm</p>
+      <h1 class="hero-name">Sourabh<br><span class="g-text">Dogra</span></h1>
+      <div class="hero-role-line">
+        <span>I build&nbsp;</span>
+        <span id="typed-text" class="typed"></span><span class="caret">_</span>
+      </div>
+      <p class="hero-bio">
+        WordPress &amp; PHP developer with <strong>4+ years</strong> of experience crafting
+        scalable, clean web solutions. Expanding into <strong>React</strong>
+        and <strong>DevOps</strong> to go full-stack.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary magnetic">Hire Me <i class="fas fa-arrow-right"></i></a>
+        <a href="cv.pdf" download class="btn btn-ghost magnetic"><i class="fas fa-download"></i> Download CV</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/sourabh-dogra-813409210" target="_blank" rel="noopener" aria-label="LinkedIn" class="s-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:dograsourabh91@gmail.com" aria-label="Email" class="s-icon"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="h-ring h-ring-1"></div>
+      <div class="h-ring h-ring-2"></div>
+      <div class="h-img-card">
+        <img src="https://ik.imagekit.io/Sourabh/Me/WhatsApp%20Image%202025-09-29%20at%207.49.14%20PM_adB2Y1jsZ.jpeg"
+             alt="Sourabh Dogra" fetchpriority="high" loading="eager">
+      </div>
+      <div class="avail-badge"><span class="pulse"></span>Available for work</div>
+      <div class="h-float h-float-wp">
+        <i class="fab fa-wordpress"></i>
+        <div><strong>WordPress</strong><small>Expert · 4+ yrs</small></div>
+      </div>
+      <div class="h-float h-float-php">
+        <i class="fab fa-php"></i>
+        <div><strong>PHP</strong><small>Expert</small></div>
+      </div>
+      <div class="h-float h-float-shopify">
+        <i class="fas fa-store"></i>
+        <div><strong>Shopify</strong><small>Advanced</small></div>
+      </div>
+      <div class="h-float h-float-react">
+        <i class="fab fa-react"></i>
+        <div><strong>React</strong><small>Learning</small></div>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="#about" class="scroll-hint" aria-label="Scroll down">
+    <div class="scroll-mouse"><span class="scroll-wheel"></span></div>
+    <span>Scroll</span>
+  </a>
+</section>
+
+<!-- ==================================================
+  ABOUT
+================================================== -->
+<section id="about" class="section">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">Get To Know Me</span>
+      <h2 class="sec-title">About <span class="g-text">Me</span></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-img-col">
+        <div class="about-img-wrap">
+          <img src="https://ik.imagekit.io/Sourabh/Me/WhatsApp%20Image%202025-09-29%20at%207.49.14%20PM_adB2Y1jsZ.jpeg"
+               alt="Sourabh Dogra" loading="lazy">
+          <div class="about-shape"></div>
+          <div class="exp-badge">
+            <span class="exp-num">4+</span>
+            <span>Years<br>Exp.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <p class="about-p">I'm a passionate <strong>WordPress &amp; PHP Developer</strong> with over 4 years of professional experience building clean, scalable, performance-driven web solutions for clients across multiple industries and countries.</p>
+        <p class="about-p">My work spans custom <strong>WordPress themes &amp; plugins</strong>, robust <strong>PHP applications</strong>, WooCommerce stores, and RESTful APIs — always focused on clean architecture and business goals.</p>
+        <p class="about-p">Currently expanding into <strong>React</strong> for modern frontends and <strong>DevOps</strong> practices to build and deploy complete full-stack solutions independently.</p>
+
+        <div class="about-details">
+          <div class="detail"><i class="fas fa-envelope"></i><a href="mailto:dograsourabh91@gmail.com">dograsourabh91@gmail.com</a></div>
+          <div class="detail"><i class="fas fa-phone"></i><a href="tel:8368997563">+91 8368997563</a></div>
+          <div class="detail"><i class="fas fa-map-marker-alt"></i><span>India · Remote Worldwide</span></div>
+          <div class="detail"><i class="fas fa-briefcase"></i><span>Open to Remote &amp; On-site</span></div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-chip" data-count="4" data-suffix="+"><span class="s-num">4+</span><span class="s-lbl">Years Exp.</span></div>
+          <div class="stat-chip" data-count="50" data-suffix="+"><span class="s-num">50+</span><span class="s-lbl">Projects</span></div>
+          <div class="stat-chip" data-count="15" data-suffix="+"><span class="s-num">15+</span><span class="s-lbl">Clients</span></div>
+          <div class="stat-chip" data-count="100" data-suffix="%"><span class="s-num">100%</span><span class="s-lbl">Satisfaction</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+  SKILLS
+================================================== -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">What I Know</span>
+      <h2 class="sec-title">Technical <span class="g-text">Skills</span></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-cat">
+        <div class="skill-cat-hd"><i class="fas fa-layer-group"></i><h3>CMS &amp; E-Commerce</h3></div>
+        <div class="skill-items">
+          <div class="skill-row"><span class="sk-icon"><i class="fab fa-wordpress"></i></span><span class="sk-name">WordPress</span><div class="sk-bar"><div class="sk-fill" style="--lv:95%"></div></div><span class="sk-pct">95%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fas fa-shopping-cart"></i></span><span class="sk-name">WooCommerce</span><div class="sk-bar"><div class="sk-fill" style="--lv:90%"></div></div><span class="sk-pct">90%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fas fa-store"></i></span><span class="sk-name">Shopify</span><div class="sk-bar"><div class="sk-fill" style="--lv:80%"></div></div><span class="sk-pct">80%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fas fa-pencil-ruler"></i></span><span class="sk-name">Elementor Pro</span><div class="sk-bar"><div class="sk-fill" style="--lv:90%"></div></div><span class="sk-pct">90%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-hd"><i class="fas fa-server"></i><h3>Backend</h3></div>
+        <div class="skill-items">
+          <div class="skill-row"><span class="sk-icon"><i class="fab fa-php"></i></span><span class="sk-name">PHP</span><div class="sk-bar"><div class="sk-fill" style="--lv:90%"></div></div><span class="sk-pct">90%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fas fa-database"></i></span><span class="sk-name">MySQL</span><div class="sk-bar"><div class="sk-fill" style="--lv:82%"></div></div><span class="sk-pct">82%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fas fa-plug"></i></span><span class="sk-name">REST APIs</span><div class="sk-bar"><div class="sk-fill" style="--lv:80%"></div></div><span class="sk-pct">80%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fab fa-python"></i></span><span class="sk-name">Python</span><div class="sk-bar"><div class="sk-fill" style="--lv:50%"></div></div><span class="sk-pct">50%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-hd"><i class="fas fa-code"></i><h3>Frontend</h3></div>
+        <div class="skill-items">
+          <div class="skill-row"><span class="sk-icon"><i class="fab fa-html5"></i></span><span class="sk-name">HTML5</span><div class="sk-bar"><div class="sk-fill" style="--lv:95%"></div></div><span class="sk-pct">95%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fab fa-css3-alt"></i></span><span class="sk-name">CSS3 / SCSS</span><div class="sk-bar"><div class="sk-fill" style="--lv:90%"></div></div><span class="sk-pct">90%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fab fa-js"></i></span><span class="sk-name">JavaScript</span><div class="sk-bar"><div class="sk-fill" style="--lv:75%"></div></div><span class="sk-pct">75%</span></div>
+          <div class="skill-row"><span class="sk-icon"><i class="fab fa-bootstrap"></i></span><span class="sk-name">Bootstrap</span><div class="sk-bar"><div class="sk-fill" style="--lv:88%"></div></div><span class="sk-pct">88%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-cat skill-cat-learning">
+        <div class="skill-cat-hd"><i class="fas fa-graduation-cap"></i><h3>Currently Learning</h3></div>
+        <div class="skill-items">
+          <div class="skill-row"><span class="sk-icon lrn"><i class="fab fa-react"></i></span><span class="sk-name">React</span><div class="sk-bar"><div class="sk-fill lrn-fill" style="--lv:45%"></div></div><span class="sk-pct">45%</span></div>
+          <div class="skill-row"><span class="sk-icon lrn"><i class="fab fa-docker"></i></span><span class="sk-name">Docker</span><div class="sk-bar"><div class="sk-fill lrn-fill" style="--lv:40%"></div></div><span class="sk-pct">40%</span></div>
+          <div class="skill-row"><span class="sk-icon lrn"><i class="fab fa-linux"></i></span><span class="sk-name">Linux / CLI</span><div class="sk-bar"><div class="sk-fill lrn-fill" style="--lv:55%"></div></div><span class="sk-pct">55%</span></div>
+          <div class="skill-row"><span class="sk-icon lrn"><i class="fas fa-infinity"></i></span><span class="sk-name">CI / CD</span><div class="sk-bar"><div class="sk-fill lrn-fill" style="--lv:35%"></div></div><span class="sk-pct">35%</span></div>
+        </div>
+        <p class="learning-note"><i class="fas fa-rocket"></i> Actively building &amp; growing every day</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+  SERVICES
+================================================== -->
+<section id="services" class="section">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">What I Offer</span>
+      <h2 class="sec-title">My <span class="g-text">Services</span></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fab fa-wordpress"></i></div>
+        <h3>WordPress Development</h3>
+        <p>Custom themes, plugins, WooCommerce stores, and page builder development — from simple blogs to complex e-commerce platforms.</p>
+        <ul class="svc-list">
+          <li>Custom Theme &amp; Plugin Development</li>
+          <li>WooCommerce &amp; Payment Gateways</li>
+          <li>Elementor / ACF Integration</li>
+          <li>Multilingual (WPML) Sites</li>
+        </ul>
+        <span class="svc-badge">Primary</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fab fa-php"></i></div>
+        <h3>PHP Development</h3>
+        <p>Custom web applications, RESTful APIs, and database-driven solutions built with clean, maintainable PHP code.</p>
+        <ul class="svc-list">
+          <li>Custom Web Applications</li>
+          <li>RESTful API Development</li>
+          <li>MySQL Database Design</li>
+          <li>Legacy Code Modernization</li>
+        </ul>
+        <span class="svc-badge">Primary</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <h3>Performance Optimization</h3>
+        <p>Speed up your website with advanced caching, CDN setup, query optimization, and Core Web Vitals improvements.</p>
+        <ul class="svc-list">
+          <li>Page Speed &amp; Lighthouse Audit</li>
+          <li>CDN &amp; Caching Configuration</li>
+          <li>Image &amp; Asset Optimization</li>
+          <li>Database Query Tuning</li>
+        </ul>
+        <span class="svc-badge">Advanced</span>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Website Maintenance</h3>
+        <p>Ongoing support, security monitoring, regular updates, and technical troubleshooting to keep your site healthy.</p>
+        <ul class="svc-list">
+          <li>Security Monitoring &amp; Hardening</li>
+          <li>Regular Updates &amp; Backups</li>
+          <li>Bug Fixes &amp; Troubleshooting</li>
+          <li>Uptime Monitoring</li>
+        </ul>
+        <span class="svc-badge">Ongoing</span>
+      </div>
+
+      <div class="svc-card svc-card-learning">
+        <div class="svc-icon svc-icon-purple"><i class="fab fa-react"></i></div>
+        <h3>React Development</h3>
+        <p>Building modern, interactive frontends with React. Currently honing skills to deliver cutting-edge user experiences.</p>
+        <ul class="svc-list">
+          <li>React Component Architecture</li>
+          <li>State Management (Hooks / Zustand)</li>
+          <li>API Integration &amp; Data Fetching</li>
+          <li>Responsive SPA Design</li>
+        </ul>
+        <span class="svc-badge svc-badge-purple">Learning</span>
+      </div>
+
+      <div class="svc-card svc-card-learning">
+        <div class="svc-icon svc-icon-purple"><i class="fab fa-docker"></i></div>
+        <h3>DevOps Basics</h3>
+        <p>Containerized development environments, CI/CD pipelines, and basic server setup for streamlined deployments.</p>
+        <ul class="svc-list">
+          <li>Docker Containerization</li>
+          <li>Linux Server Administration</li>
+          <li>GitHub Actions CI/CD</li>
+          <li>Deployment Automation</li>
+        </ul>
+        <span class="svc-badge svc-badge-purple">Learning</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+  PROJECTS
+================================================== -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">My Work</span>
+      <h2 class="sec-title">Featured <span class="g-text">Projects</span></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="project-filters" role="group" aria-label="Project filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="wordpress">WordPress</button>
+      <button class="filter-btn" data-filter="php">PHP</button>
+      <button class="filter-btn" data-filter="shopify">Shopify</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- 1. Rausch Advisory -->
+      <div class="proj-card" data-cat="wordpress php">
+        <div class="proj-thumb" style="--g:linear-gradient(135deg,#1a1a2e,#16213e)">
+          <div class="proj-client-logo">
+            <img src="Client%20logo/Rausch.jpg" alt="Rausch Advisory" loading="lazy">
+          </div>
+          <div class="proj-links">
+            <a href="#" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <i class="fas fa-graduation-cap proj-bg-ico"></i>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>WordPress</span><span>PHP</span><span>LMS</span><span>MySQL</span></div>
+          <h3>Rausch Advisory — LMS Tracking System</h3>
+          <p>Built a custom video-progress tracking system inside an LMS plugin, saving user progress to the database so learners can resume from any device. Added dynamic meeting links to courses (sent via email) and automated post-completion redirects to a survey form — features entirely absent from the default plugin.</p>
+        </div>
+      </div>
+
+      <!-- 2. Dolphin Party Rental -->
+      <div class="proj-card" data-cat="wordpress php">
+        <div class="proj-thumb" style="--g:linear-gradient(135deg,#0f3460,#533483)">
+          <div class="proj-client-logo">
+            <img src="Client%20logo/466017226_500144476374226_1848450729894880612_n-1.webp" alt="Dolphin Party Rental" loading="lazy">
+          </div>
+          <div class="proj-links">
+            <a href="#" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <i class="fas fa-calendar-alt proj-bg-ico"></i>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>WordPress</span><span>Custom Plugin</span><span>PHP</span><span>Booking</span></div>
+          <h3>Dolphin Party Rental — Booking System</h3>
+          <p>Developed a custom WordPress plugin powering a multi-step checkout and booking system with flexible date configuration for different rental scenarios — handling availability checks, slot selection, and order processing tailored exactly to the client's business workflow.</p>
+        </div>
+      </div>
+
+      <!-- 3. RSF Systems -->
+      <div class="proj-card" data-cat="wordpress php">
+        <div class="proj-thumb" style="--g:linear-gradient(135deg,#134e5e,#71b280)">
+          <div class="proj-client-logo">
+            <img src="Client%20logo/Rudloff_Strongforce.svg" alt="RSF Systems" loading="lazy">
+          </div>
+          <div class="proj-links">
+            <a href="#" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <i class="fas fa-map-marked-alt proj-bg-ico"></i>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>WordPress</span><span>PHP</span><span>JavaScript</span><span>Interactive UI</span></div>
+          <h3>RSF Systems — Interactive Map Section</h3>
+          <p>Designed and developed a fully custom interactive map section integrated into the client's WordPress site, allowing users to visually explore locations and information with smooth, engaging interactivity built from scratch.</p>
+        </div>
+      </div>
+
+      <!-- 4. G3AEC -->
+      <div class="proj-card" data-cat="wordpress">
+        <div class="proj-thumb" style="--g:linear-gradient(135deg,#373b44,#4286f4)">
+          <div class="proj-client-logo">
+            <img src="Client%20logo/G3-Design-Build-New-Logo.png" alt="G3AEC" loading="lazy">
+          </div>
+          <div class="proj-links">
+            <a href="#" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <i class="fas fa-layer-group proj-bg-ico"></i>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>WordPress</span><span>JavaScript</span><span>Custom UI</span><span>ACF</span></div>
+          <h3>G3AEC — Interactive Project Showcase</h3>
+          <p>Built a bespoke project showcase page featuring a custom interactive click-to-reveal slider — letting visitors explore the client's portfolio of architectural and construction projects with a polished, click-driven navigation experience.</p>
+        </div>
+      </div>
+
+      <!-- 5. Elizabeth Lamont -->
+      <div class="proj-card" data-cat="shopify">
+        <div class="proj-thumb" style="--g:linear-gradient(135deg,#c94b4b,#4b134f)">
+          <div class="proj-client-logo">
+            <img src="Client%20logo/Elizabeth.png" alt="Elizabeth Lamont" loading="lazy">
+          </div>
+          <div class="proj-links">
+            <a href="#" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <i class="fas fa-store proj-bg-ico"></i>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>Shopify</span><span>Liquid</span><span>Custom Theme</span><span>E-Commerce</span></div>
+          <h3>Elizabeth Lamont — Shopify Store</h3>
+          <p>Delivered bespoke Shopify development tailored to the client's exact requirements — including custom Liquid theme modifications, unique product presentation, and specialised storefront features that go beyond out-of-the-box Shopify capabilities.</p>
+        </div>
+      </div>
+
+      <!-- 6. Koemmerling -->
+      <div class="proj-card" data-cat="wordpress">
+        <div class="proj-thumb" style="--g:linear-gradient(135deg,#2c3e50,#4ca1af)">
+          <div class="proj-client-logo">
+            <img src="Client%20logo/Koemmerling.png" alt="Koemmerling" loading="lazy">
+          </div>
+          <div class="proj-links">
+            <a href="#" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <i class="fas fa-globe proj-bg-ico"></i>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>WordPress</span><span>WPML</span><span>Custom Theme</span><span>ACF</span></div>
+          <h3>Koemmerling — Multilingual Corporate Site</h3>
+          <p>Developed a multilingual corporate website with a fully custom WordPress theme, WPML language management, and Advanced Custom Fields for structured product and content management across markets.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+  EXPERIENCE
+================================================== -->
+<section id="experience" class="section">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">My Journey</span>
+      <h2 class="sec-title">Work <span class="g-text">Experience</span></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-track"><div class="tl-progress" id="tl-progress"></div></div>
+
+      <!-- 1. TAC Security — Current -->
+      <div class="tl-item tl-left">
+        <div class="tl-dot"></div>
+        <div class="tl-card tl-card-current">
+          <div class="tl-header">
+            <h3>Product Engineer <span class="current-badge">Current</span></h3>
+            <span class="tl-date">2025 – Present</span>
+          </div>
+          <p class="tl-company"><i class="fas fa-shield-alt"></i> TAC Security, India</p>
+          <ul class="tl-list">
+            <li>Working as a Product Engineer on enterprise-grade cybersecurity products</li>
+            <li>Developing and maintaining web-based product interfaces and features</li>
+            <li>Collaborating with cross-functional teams on product roadmap and delivery</li>
+            <li>Applying WordPress and PHP expertise to security-focused product development</li>
+          </ul>
+          <div class="tl-tags"><span>WordPress</span><span>PHP</span><span>Product Engineering</span><span>Cybersecurity</span></div>
+        </div>
+      </div>
+
+      <!-- 2. Plaxonic -->
+      <div class="tl-item tl-right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <h3>WordPress Developer</h3>
+            <span class="tl-date">Nov 2024 – 2025</span>
+          </div>
+          <p class="tl-company"><i class="fas fa-building"></i> Plaxonic, Noida</p>
+          <ul class="tl-list">
+            <li>Worked on frontend and backend development as a software engineer</li>
+            <li>Customised themes and plugins per client requirements and added new functionality</li>
+            <li>Leveraged AI tools to optimise task execution and reduce time to delivery</li>
+            <li>Conducted code reviews and maintained high-quality standards across all deliverables</li>
+          </ul>
+          <div class="tl-tags"><span>WordPress</span><span>PHP</span><span>Theme Dev</span><span>AI Tools</span></div>
+        </div>
+      </div>
+
+      <!-- 3. Brand Visage -->
+      <div class="tl-item tl-left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <h3>WordPress Developer</h3>
+            <span class="tl-date">May 2023 – Oct 2024</span>
+          </div>
+          <p class="tl-company"><i class="fas fa-building"></i> Brand Visage Communications</p>
+          <ul class="tl-list">
+            <li>Undertook advanced customisation — custom post types, taxonomies, and PHP extensions</li>
+            <li>Led client communication, project scoping, and timeline estimation</li>
+            <li>Implemented advanced SEO strategies to boost organic search rankings</li>
+            <li>Mentored junior developers and established stringent quality control processes</li>
+          </ul>
+          <div class="tl-tags"><span>WordPress</span><span>PHP</span><span>SEO</span><span>Mentoring</span></div>
+        </div>
+      </div>
+
+      <!-- 4. Alexis Infosolutions -->
+      <div class="tl-item tl-right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <h3>WordPress Developer</h3>
+            <span class="tl-date">Jun 2022 – May 2023</span>
+          </div>
+          <p class="tl-company"><i class="fas fa-building"></i> Alexis Infosolutions</p>
+          <ul class="tl-list">
+            <li>Customised WordPress themes with CSS, HTML, and PHP; integrated diverse plugins</li>
+            <li>Addressed client tickets, debugged PHP errors, ensured cross-browser compatibility</li>
+            <li>Executed on-page SEO techniques and image optimisation for performance</li>
+            <li>Conducted rigorous testing for responsive layouts and maintained documentation</li>
+          </ul>
+          <div class="tl-tags"><span>WordPress</span><span>PHP</span><span>CSS</span><span>SEO</span></div>
+        </div>
+      </div>
+
+      <!-- 5. Dr. Nutrino -->
+      <div class="tl-item tl-left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <h3>Junior WordPress Developer</h3>
+            <span class="tl-date">Jun 2020 – May 2022</span>
+          </div>
+          <p class="tl-company"><i class="fas fa-building"></i> Dr. Nutrino</p>
+          <ul class="tl-list">
+            <li>Built and managed WordPress sites, customising themes and plugins from the ground up</li>
+            <li>Developed PHP skills for database interaction and custom feature creation with MySQL</li>
+            <li>Ensured mobile-friendly, cross-browser compatible sites using CSS media queries</li>
+            <li>Improved site speed by compressing images and minifying CSS/JS files</li>
+          </ul>
+          <div class="tl-tags"><span>WordPress</span><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+        </div>
+      </div>
+
+      <!-- Freelance note -->
+      <div class="tl-freelance">
+        <i class="fas fa-laptop-code"></i>
+        <span>Throughout this journey, also worked as a <strong>freelancer</strong> on 50+ projects for businesses across Germany, UK, and the USA.</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+  CLIENTS
+================================================== -->
+<section id="clients" class="section section-alt">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">Trusted By</span>
+      <h2 class="sec-title">Happy <span class="g-text">Clients</span></h2>
+      <div class="sec-line"></div>
+      <p class="sec-desc">Businesses I've proudly partnered with to build their digital presence.</p>
+    </div>
+
+    <!-- Infinite marquee -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <div class="mq-logo"><img src="Client%20logo/Advance%20automation.jpg"                                       alt="Advance Automation" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Elizabeth.png"                                                  alt="Elizabeth Lamont" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/G3-Design-Build-New-Logo.png"                                   alt="G3 Design Build" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Koemmerling.png"                                                alt="Koemmerling" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/p1logo.png.webp"                                                alt="P1" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Rausch.jpg"                                                     alt="Rausch Advisory" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Rudloff_Strongforce.svg"                                        alt="RSF Systems" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Seo%20ninja.svg"                                                alt="SEO Ninja" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/T%26H.avif"                                                     alt="T&amp;H" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/466017226_500144476374226_1848450729894880612_n-1.webp"          alt="Dolphin Party Rental" loading="lazy"></div>
+        </div>
+        <!-- duplicate for seamless loop -->
+        <div class="marquee-group" aria-hidden="true">
+          <div class="mq-logo"><img src="Client%20logo/Advance%20automation.jpg"                                       alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Elizabeth.png"                                                  alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/G3-Design-Build-New-Logo.png"                                   alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Koemmerling.png"                                                alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/p1logo.png.webp"                                                alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Rausch.jpg"                                                     alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Rudloff_Strongforce.svg"                                        alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/Seo%20ninja.svg"                                                alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/T%26H.avif"                                                     alt="" loading="lazy"></div>
+          <div class="mq-logo"><img src="Client%20logo/466017226_500144476374226_1848450729894880612_n-1.webp"          alt="" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ==================================================
+  TESTIMONIALS
+================================================== -->
+<section id="testimonials" class="section">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">Kind Words</span>
+      <h2 class="sec-title">Client <span class="g-text">Testimonials</span></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="t-slider">
+      <div class="t-track" id="t-track">
+
+        <div class="t-card t-active">
+          <i class="fas fa-quote-left t-quote"></i>
+          <p class="t-text">Sourabh delivered our corporate website exactly as we envisioned — on time, within budget, and with excellent attention to detail. His WordPress expertise is outstanding and communication was seamless throughout.</p>
+          <div class="t-author">
+            <div class="t-avatar">JM</div>
+            <div><strong>Jan Müller</strong><small>CEO, Koemmerling GmbH</small></div>
+          </div>
+          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        </div>
+
+        <div class="t-card">
+          <i class="fas fa-quote-left t-quote"></i>
+          <p class="t-text">His PHP skills helped us build a custom automation tool that saves our team 20+ hours every week. Sourabh understood our requirements perfectly and delivered a clean, scalable solution. Highly recommended!</p>
+          <div class="t-author">
+            <div class="t-avatar">SR</div>
+            <div><strong>Sarah Richardson</strong><small>Operations Manager, Advance Automation</small></div>
+          </div>
+          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        </div>
+
+        <div class="t-card">
+          <i class="fas fa-quote-left t-quote"></i>
+          <p class="t-text">Our WooCommerce store has significantly boosted online sales since Sourabh built it. The site is fast, beautiful, and easy to manage. He went beyond the brief and added features we didn't even know we needed!</p>
+          <div class="t-author">
+            <div class="t-avatar">EK</div>
+            <div><strong>Elena Koch</strong><small>Founder, Elizabeth Beauty</small></div>
+          </div>
+          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        </div>
+
+      </div>
+
+      <div class="t-controls">
+        <button id="t-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <div class="t-dots">
+          <span class="t-dot t-dot-active" data-i="0"></span>
+          <span class="t-dot" data-i="1"></span>
+          <span class="t-dot" data-i="2"></span>
+        </div>
+        <button id="t-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================================
+  CONTACT
+================================================== -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+
+    <div class="sec-header">
+      <span class="sec-tag">Let's Talk</span>
+      <h2 class="sec-title">Get In <span class="g-text">Touch</span></h2>
+      <div class="sec-line"></div>
+      <p class="sec-desc">Have a project in mind? Let's build something great together.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info-col">
+        <div class="contact-info-card">
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div><label>Email</label><a href="mailto:dograsourabh91@gmail.com">dograsourabh91@gmail.com</a></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div><label>Phone</label><a href="tel:8368997563">+91 8368997563</a></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><label>Location</label><span>India · Remote Worldwide</span></div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fas fa-clock"></i></div>
+            <div><label>Response</label><span>Within 24 hours</span></div>
+          </div>
+        </div>
+        <div class="contact-social-row">
+          <a href="https://www.linkedin.com/in/sourabh-dogra-813409210" target="_blank" rel="noopener" class="cs-btn cs-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="contact-form-col">
+        <form id="contact-form" novalidate>
+          <!-- Honeypot spam protection -->
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="f-name">Name <span class="req">*</span></label>
+              <input type="text" id="f-name" name="name" placeholder="John Doe" required>
+              <span class="ferr"></span>
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email <span class="req">*</span></label>
+              <input type="email" id="f-email" name="email" placeholder="john@example.com" required>
+              <span class="ferr"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-subject">Subject <span class="req">*</span></label>
+            <input type="text" id="f-subject" name="subject" placeholder="Project Inquiry" required>
+            <span class="ferr"></span>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Message <span class="req">*</span></label>
+            <textarea id="f-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="ferr"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+            <span class="btn-label">Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+            <span class="btn-spinner"></span>
+          </button>
+          <div class="form-msg" id="form-msg" role="alert"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================
+  FOOTER
+================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">S<span>.</span>Dogra</a>
+        <p>WordPress &amp; PHP Developer building clean, scalable web solutions. Currently learning React &amp; DevOps.</p>
+        <div class="footer-soc">
+          <a href="https://www.linkedin.com/in/sourabh-dogra-813409210" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:dograsourabh91@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">WordPress Dev</a></li>
+          <li><a href="#services">PHP Development</a></li>
+          <li><a href="#services">WooCommerce</a></li>
+          <li><a href="#services">Performance Opt.</a></li>
+          <li><a href="#services">React (Learning)</a></li>
+          <li><a href="#services">Website Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> dograsourabh91@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91 8368997563</p>
+        <p><i class="fas fa-map-marker-alt"></i> India</p>
+        <a href="cv.pdf" download class="btn btn-ghost btn-sm" style="margin-top:16px">Download CV</a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sourabh Dogra. All rights reserved.</p>
+      <p>Built with <i class="fas fa-heart" style="color:#f5576c"></i> &amp; <i class="fab fa-php" style="color:#00f5ff"></i></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+<script src="assets/js/three-scene.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
